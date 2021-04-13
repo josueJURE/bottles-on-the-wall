@@ -15,6 +15,13 @@ function bottlesOnTheWall() {
     }
     count--
   }
+  myArray.forEach(function (item) {
+    var divElement =  document.createElement("div");
+    var text = document.createTextNode(item);
+    divElement.appendChild(text);
+    bottles.appendChild(divElement);
+  })
+
   console.log(myArray)
 }
 bottlesOnTheWall();
