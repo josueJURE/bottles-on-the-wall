@@ -16,7 +16,7 @@ function bottlesOnTheWall() {
     count--
   }
   myArray.forEach(function (item) {
-    var divElement =  document.createElement("div");
+    var divElement =  document.createElement("li");
     var text = document.createTextNode(item);
     divElement.appendChild(text);
     bottles.appendChild(divElement);

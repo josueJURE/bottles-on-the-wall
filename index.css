@@ -2,3 +2,16 @@
   line-height: 2;
   letter-spacing: 3px;
 }
+
+/* ul {
+  list-style-image: url('beer.png');
+} */
+
+body {
+  background: #FFF8DC;
+}
+
+ul li {
+  background: #FFEBCD;
+  margin: 15px;
+}
