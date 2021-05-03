@@ -1,6 +1,7 @@
 const bottles = document.getElementById("bottles");
 count = 99;
 var myArray = [];
+var j = 0;
 
 function bottlesOnTheWall() {
   while (count > 0) {
@@ -15,13 +16,18 @@ function bottlesOnTheWall() {
     }
     count--
   }
-  myArray.forEach(function (item) {
-    var divElement =  document.createElement("li");
-    var text = document.createTextNode(item);
-    divElement.appendChild(text);
-    bottles.appendChild(divElement);
-  })
-
-  console.log(myArray)
+  while (j < myArray.length) {
+    var liElement = document.createElement("li");
+    var text = document.createTextNode(myArray[j]);
+    liElement.appendChild(text);
+    bottles.appendChild(liElement);
+    var bottlesArray = Array.from(bottles);
+    if(j % 2) {
+      bottlesArray[j].style.width = "300px";
+    } else {
+      bottlesArray[j].style.width = "500px";
+    }
+    j++;
+  }
 }
 bottlesOnTheWall();
