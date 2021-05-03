@@ -21,11 +21,10 @@ function bottlesOnTheWall() {
     var text = document.createTextNode(myArray[j]);
     liElement.appendChild(text);
     bottles.appendChild(liElement);
-    var bottlesArray = Array.from(bottles);
     if(j % 2) {
-      bottlesArray[j].style.width = "300px";
+      liElement.style.width = "300px";
     } else {
-      bottlesArray[j].style.width = "500px";
+      liElement.style.width = "500px";
     }
     j++;
   }
